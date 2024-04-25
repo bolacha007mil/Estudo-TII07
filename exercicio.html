@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício - JS</title>
+    <script>
+        /* Crie um programa que após receber uma empresa de cuidadoria de pet´s, cadastre todos os animais levando em conta: 
+        TIPO DE ANIMAIS DOMÉSTICOS (cães, gatos, pássaros), RAÇA, IDADE, COR, PORTE, e DADOS DO DONO (nome, telefone e endereço)
+        se for pássaros, colocar em VIVEIRO; se for gato, colocar na SALA DE GATOS; e se for cachorro, colocar no PARQUE DE CÃES
+        No final, imprima todos os dados dos animais e seus donos, e a quantidade de cada animal pelo seu tipo
+        */
+    
+        // empresa de cuidadoria de pets
+
+        let pet, raca, idade, cor, porte, nome, telefone, endereco, quantidade
+
+        // dono
+        nome = prompt("Digite o seu nome: ")
+        telefone = prompt("Digite seu telefone para contato: ")
+        endereco = prompt("Digite seu endereço: ")
+        
+        let dadosdono = new Array(3)
+        
+        do{
+        dadosdono[0] = nome
+        dadosdono[1] = telefone
+        dadosdono[2] = endereco
+        
+        // pet
+
+        pet = parseInt(prompt("Qual é o seu pet?\nDigite 1 para Cão, 2 para Gato e 3 para Pássaro: "))
+        raca = prompt("Qual a raça do seu pet?")
+        idade = prompt("Qual a idade do seu pet?")
+        cor = prompt("Qual a cor do seu pet?")
+        porte = prompt("Qual o porte do seu pet?")
+
+        let parquedecaes = new Array(4)
+        let saladegatos = new Array(4)
+        let viveiro = new Array(4)
+        
+        if(pet == 1){
+            parquedecaes[0] = raca
+            parquedecaes[1] = idade
+            parquedecaes[2] = cor
+            parquedecaes[3] = porte
+        }else if(pet == 2){
+            saladegatos[0] = raca 
+            saladegatos[1] = idade
+            saladegatos[2] = cor
+            saladegatos[3] = porte
+        }else if(pet == 3){
+            viveiro[0] = raca
+            viveiro[1] = idade
+            viveiro[2] = cor
+            viveiro[3] = porte
+        }
+        }while(adicionar == "1")
+        
+
+        //saida
+
+        console.log(
+            dadosdono[0] + "\n" +
+            dadosdono[1] + "\n" +
+            dadosdono[2]
+        )
+        
+    
+        if(pet == 1){
+            console.log(
+            parquedecaes[0] + "\n" +
+            parquedecaes[1] + "\n" + 
+            parquedecaes[2] + "\n" +
+            parquedecaes[3]
+            )
+        }else if(pet == 2){
+            console.log(
+            saladegatos[0] + "\n" +
+            saladegatos[1] + "\n" + 
+            saladegatos[2] + "\n" +
+            saladegatos[3]
+            )
+        }else if(pet == 3){
+            console.log(
+            viveiro[0] + "\n" +
+            viveiro[1] + "\n" + 
+            viveiro[2] + "\n" +
+            viveiro[3]
+            )
+        }
+
+        quantidade = 1
+
+        alert("Nome: " + dadosdono[0] + "\nTelefone: " + dadosdono[1] + "\nEndereço: " + dadosdono[2] + "\n______________________\n" + "\nRaça: " + raca + "\nIdade: " + idade + "\nCor: " + cor + "\nPorte: " + porte + "\nQuantidade: " + quantidade)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
